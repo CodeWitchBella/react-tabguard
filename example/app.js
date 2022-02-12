@@ -1,13 +1,12 @@
-const React = require('react')
-const ReactDOM = require('react-dom-factories')
-const createClass = require('create-react-class')
-
-const TabGuard = React.createFactory(require('../src/'))
+import React from 'react'
+import ReactDOM from 'react-dom-factories'
+import createClass from 'create-react-class'
+import TabGuard from '../src/tabguard.js'
 
 const { div, h1, p, input, button, select, option, textarea, a, fieldset } =
   ReactDOM
 
-module.exports = createClass({
+export const App = createClass({
   displayName: 'App',
 
   getInitialState() {
@@ -24,7 +23,8 @@ module.exports = createClass({
 
       h1(null, 'First form'),
 
-      TabGuard(
+      React.createElement(
+        TabGuard,
         null,
         div(
           null,
@@ -60,7 +60,8 @@ module.exports = createClass({
 
       h1(null, 'Second form'),
 
-      TabGuard(
+      React.createElement(
+        TabGuard,
         null,
         div(
           null,

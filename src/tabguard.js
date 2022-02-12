@@ -1,10 +1,7 @@
-const React = require('react')
-const ReactDOM = require('react-dom')
-const arrayFrom = require('array-from')
-const PropTypes = require('prop-types')
-const createClass = require('create-react-class')
-
-const tabGuard = React.createFactory('tabguard')
+import React from 'react'
+import ReactDOM from 'react-dom'
+import PropTypes from 'prop-types'
+import createClass from 'create-react-class'
 
 const focusableElementsList = [
   'a[href]',
@@ -52,7 +49,7 @@ const TabGuard = createClass({
   _registerTabGuard() {
     const parentNode = ReactDOM.findDOMNode(this)
 
-    const elements = arrayFrom(
+    const elements = Array.from(
       parentNode.querySelectorAll(focusableElementsSelector)
     )
     const focusableElements = elements.filter(this._filterFocusableElements)
@@ -103,11 +100,11 @@ const TabGuard = createClass({
   },
 
   render() {
-    tabGuard({
+    return React.createElement('div', {
       className: this.props.className,
       children: this.props.children,
     })
   },
 })
 
-module.exports = TabGuard
+export default TabGuard
