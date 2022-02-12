@@ -16,7 +16,6 @@
     "tabguard"
   ],
   "scripts": {
-    "prepublish": "coffee -o ./ src/",
     "start": "webpack-dev-server --hot --progress --colors",
     "test": "mocha && istanbul report text-summary lcov",
     "fast-test": "mocha"
@@ -33,17 +32,6 @@
     "url": "http://github.com/avocode/react-tabguard/issues"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "chai-enzyme": "^0.4.1",
-    "cheerio": "^0.20.0",
-    "coffee-coverage": "^1.0.1",
-    "coffee-loader": "^0.7.0",
-    "coffee-script": "^1.9.3",
-    "enzyme": "^2.2.0",
-    "istanbul": "^0.4.2",
-    "jsdom": "^8.3.0",
-    "lodash": "^4.8.2",
-    "mocha": "^2.2.5",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-dom-factories": "^1.0.2",
