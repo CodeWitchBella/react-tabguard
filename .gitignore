@@ -2,7 +2,6 @@
 .DS_Store
 Thumbs.db
 
-
 # built sources
 dist/
 
@@ -10,3 +9,5 @@ dist/
 node_modules/
 npm-debug.log
 coverage/
+package
+*.tgz
